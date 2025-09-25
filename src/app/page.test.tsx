@@ -11,4 +11,12 @@ describe('Home', () => {
 
     expect(heading).toBeInTheDocument();
   });
+  it('should render the journey description', () => {
+    render(<Home />);
+
+    const description = screen.getByText(
+      /My journey to master Next.js, TypeScript & Tailwind/i
+    );
+    expect(description).toBeInTheDocument();
+  });
 });

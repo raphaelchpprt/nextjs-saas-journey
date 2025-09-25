@@ -63,4 +63,22 @@ This file provides a chronological overview of all architectural decisions. For 
 
 ---
 
+## 2025-09-25: Smart Navigation with Active State
+**Status:** Accepted | **File:** `src/components/Header.tsx`
+
+**Decision:** Implement intelligent navigation that highlights the currently active page using `usePathname()` hook
+
+**Reasoning:** Improves user experience by providing visual feedback about current location, follows modern web UX patterns.
+
+---
+
+## 2025-09-25: DRY Refactoring of Header Component
+**Status:** Accepted | **File:** `src/components/Header.tsx`
+
+**Decision:** Refactor Header component to use configuration-driven approach with NavItem interface and helper functions
+
+**Reasoning:** Eliminates code duplication, makes adding new navigation items trivial, centralizes styling logic, improves maintainability.
+
+---
+
 *Last updated: 2025-09-25*
