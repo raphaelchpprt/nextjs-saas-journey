@@ -54,4 +54,13 @@ This file provides a chronological overview of all architectural decisions. For 
 
 ---
 
+## 2025-09-25: First Unit Test Implementation
+**Status:** Accepted | **File:** Individual test files (e.g., `src/app/page.test.tsx`)
+
+**Decision:** Implement first unit test for HomePage component using "Arrange, Act, Assert" pattern
+
+**Reasoning:** Establishes testing discipline early, validates Jest configuration works correctly, provides template for future component tests.
+
+---
+
 *Last updated: 2025-09-25*
