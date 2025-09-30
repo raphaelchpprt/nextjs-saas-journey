@@ -6,6 +6,8 @@ export const metadata: Metadata = {
     'Explore our pricing plans and choose the one that fits your needs.',
 };
 
+export const revalidate = 3600; // Revalidate every hour
+
 const Pricing = () => {
   return (
     <main className="flex min-h-screen flex-col items-center p-24 bg-gray-900 text-white">

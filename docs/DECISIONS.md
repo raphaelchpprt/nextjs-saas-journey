@@ -81,4 +81,13 @@ This file provides a chronological overview of all architectural decisions. For 
 
 ---
 
-*Last updated: 2025-09-25*
+## 2025-01-27: Incremental Static Regeneration Implementation
+**Status:** Accepted | **File:** [0005-incremental-static-regeneration-implementation.md](./adr/0005-incremental-static-regeneration-implementation.md)
+
+**Decision:** Implement ISR by adding `export const revalidate = 3600` to all page components for 1-hour revalidation intervals
+
+**Reasoning:** Provides automatic content updates without full rebuilds while maintaining static generation performance benefits. Balances performance and content freshness for the learning journey application.
+
+---
+
+*Last updated: 2025-01-27*
