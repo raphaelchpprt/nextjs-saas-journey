@@ -81,4 +81,29 @@ This file provides a chronological overview of all architectural decisions. For 
 
 ---
 
-*Last updated: 2025-09-25*
+## 2025-09-30: Server vs Client Components Architecture
+**Status:** Accepted | **File:** `src/app/dashboard/`
+
+**Decision:** Implement Dashboard with mixed Server/Client architecture demonstrating Next.js 13+ patterns
+
+**Key patterns implemented:**
+- Async Server Components for data fetching (`getStats()`)
+- Client Components for interactivity (`useState`, event handlers)
+- Server Actions for mutations (`syncTasksWithCount`)
+- Streaming with `<Suspense>` boundaries
+- Automatic loading/error UI with file conventions
+
+**Reasoning:** Demonstrates modern Next.js architecture, optimal performance (server rendering + selective hydration), and best practices for production apps.
+
+---
+
+## 2025-09-30: Simulated Database Layer
+**Status:** Accepted | **File:** `src/app/dashboard/db.ts`
+
+**Decision:** Create in-memory database simulation for learning Server Actions
+
+**Reasoning:** Allows practicing data persistence patterns without setting up real database, demonstrates separation of concerns, easy to replace with real DB later.
+
+---
+
+*Last updated: 2025-09-30*
