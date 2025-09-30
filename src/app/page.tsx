@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-900 text-white">
+    <main className="flex h-[calc(100vh-64px)] flex-col items-center justify-center bg-gray-900 text-white">
       <div className="text-center">
         <h1 className="text-6xl font-extrabold bg-gradient-to-r from-white via-blue-400 to-white-500 bg-clip-text text-transparent drop-shadow-lg">
           Day 1
