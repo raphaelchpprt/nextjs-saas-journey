@@ -16,6 +16,7 @@ export const Header: FC = () => {
 
   const navItems: NavItem[] = [
     { href: '/', label: 'Home', isHome: true },
+    { href: '/dashboard', label: 'Dashboard' },
     { href: '/about', label: 'About' },
     { href: '/pricing', label: 'Pricing' },
   ];
@@ -34,9 +35,11 @@ export const Header: FC = () => {
   return (
     <header className="bg-gray-800 text-white p-4">
       <nav className="container mx-auto flex justify-between">
-        <Link href={navItems[0].href} className={getLinkClasses(navItems[0])}>
-          {navItems[0].label}
-        </Link>
+        {navItems[0] && (
+          <Link href={navItems[0].href} className={getLinkClasses(navItems[0])}>
+            {navItems[0].label}
+          </Link>
+        )}
         <div className="space-x-4">
           {navItems.slice(1).map((item) => (
             <Link
