@@ -36,11 +36,9 @@ describe('DashboardPage', () => {
 
     expect(getStats).toHaveBeenCalledTimes(1);
 
-    expect(async () => {
-      expect(usersStat).toBeInTheDocument();
-      expect(revenueStat).toBeInTheDocument();
-      expect(tasksStat).toHaveLength(2);
-    });
+    expect(usersStat).toBeInTheDocument();
+    expect(revenueStat).toBeInTheDocument();
+    expect(tasksStat).toHaveLength(2);
   });
 
   it('passes initial count to InteractiveWidget', async () => {
