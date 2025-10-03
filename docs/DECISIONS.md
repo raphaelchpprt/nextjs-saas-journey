@@ -106,4 +106,37 @@ This file provides a chronological overview of all architectural decisions. For 
 
 ---
 
-*Last updated: 2025-09-30*
+## 2025-10-02: Tailwind CSS with CVA Design System
+**Status:** Accepted | **File:** `src/components/Card.tsx`
+
+**Decision:** Implement reusable Card component system using class-variance-authority (CVA) and React Context API
+
+**Key patterns implemented:**
+- CVA for type-safe variant management (default, highlighted, danger)
+- React Context to share variants with child components (DRY principle)
+- Compound component pattern (Card, CardHeader, CardBody, CardFooter)
+- `cn()` utility with clsx + tailwind-merge for intelligent class merging
+
+**Reasoning:** Creates scalable design system, maintains type safety, reduces prop drilling, follows modern React patterns for component composition.
+
+---
+
+## 2025-10-03: Comprehensive Testing Strategy
+**Status:** Accepted | **File:** [0005-testing-strategy.md](./adr/0005-testing-strategy.md)
+
+**Decision:** Implement comprehensive testing strategy covering Server Components, Client Components, and Server Actions
+
+**Coverage achieved:** 96.33% (target: 85%+)
+
+**Key patterns implemented:**
+- Server Component testing with async/await pattern
+- Client Component testing with fireEvent and waitFor
+- Global mocks for Next.js APIs (navigation, cache)
+- Module-level mocking for database and Server Actions
+- Jest + React Testing Library with @testing-library/jest-dom
+
+**Reasoning:** High test coverage provides confidence for refactoring, catches regressions early, documents expected behavior, enables safe continuous deployment.
+
+---
+
+*Last updated: 2025-10-03*
