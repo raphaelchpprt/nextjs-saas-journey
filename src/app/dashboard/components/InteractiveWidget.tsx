@@ -89,6 +89,7 @@ export default function InteractiveWidget({ initialCount }: Props) {
         className={`mt-4 p-4 rounded-xl transition-colors ${
           isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-300 text-black'
         }`}
+        data-testid={'theme-preview-container'}
       >
         <p className="font-semibold">📝 How it works:</p>
         <ol className="text-sm mt-2 space-y-1 list-decimal list-inside">
