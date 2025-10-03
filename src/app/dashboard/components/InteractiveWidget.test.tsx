@@ -18,13 +18,9 @@ describe('InteractiveWidget', () => {
   });
 
   it('renders with initial count', async () => {
-    const mockStats = { users: 200, revenue: '$5000', tasks: 10 };
-    (syncTasksWithCount as jest.Mock).mockResolvedValue(mockStats);
-
-    const component = await InteractiveWidget();
-    render(component);
-    const taskSection = screen.getByText(/Task count:/i).closest('p');
-    const count = within(taskSection!).getByText('10');
-    expect(count).toBeInTheDocument();
+    render(<InteractiveWidget initialCount={10} />);
+    expect(screen.getByText(/Task count:/i)).toHaveTextContent(
+      'Task count: 10'
+    );
   });
 });
