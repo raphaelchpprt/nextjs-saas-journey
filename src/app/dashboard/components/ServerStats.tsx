@@ -13,7 +13,7 @@ interface ServerStatsProps {
 export function ServerStats({ stats }: ServerStatsProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <Card variant="default" size="sm">
+      <Card variant="default" size="sm" dataTestId="user-stats-card">
         <CardHeader>
           <h3 className="text-lg font-semibold text-gray-300">👥 Users</h3>
         </CardHeader>
@@ -23,7 +23,7 @@ export function ServerStats({ stats }: ServerStatsProps) {
         </CardBody>
       </Card>
 
-      <Card variant="highlighted">
+      <Card variant="highlighted" dataTestId="user-stats-card">
         <CardHeader>
           <h3 className="text-lg font-semibold text-cyan-300">💰 Revenue</h3>
         </CardHeader>
@@ -35,7 +35,10 @@ export function ServerStats({ stats }: ServerStatsProps) {
         </CardBody>
       </Card>
 
-      <Card variant={stats.tasks > 50 ? 'danger' : 'default'}>
+      <Card
+        variant={stats.tasks > 50 ? 'danger' : 'default'}
+        dataTestId="user-stats-card"
+      >
         <CardHeader>
           <h3 className="text-lg font-semibold text-gray-300">
             {stats.tasks > 50 ? '⚠️' : '✅'} Tasks

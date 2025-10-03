@@ -55,6 +55,7 @@ const CardHeaderVariants = cva('border-b pb-3 mb-4', {
 interface CardProps extends VariantProps<typeof cardVariants> {
   children: ReactNode;
   className?: string;
+  dataTestId?: string;
 }
 
 interface CardHeaderProps {
@@ -73,12 +74,21 @@ interface CardFooterProps {
   className?: string;
 }
 
-export const Card: FC<CardProps> = ({ children, variant, size, className }) => {
+export const Card: FC<CardProps> = ({
+  children,
+  variant,
+  size,
+  className,
+  dataTestId = '',
+}) => {
   const finalVariant: CardVariant = (variant as CardVariant) ?? 'default';
 
   return (
     <CardContext.Provider value={{ variant: finalVariant }}>
-      <div className={cn(cardVariants({ variant, size }), className)}>
+      <div
+        className={cn(cardVariants({ variant, size }), className)}
+        data-testid={dataTestId}
+      >
         {children}
       </div>
     </CardContext.Provider>
