@@ -4,6 +4,7 @@ import {
   fireEvent,
   waitFor,
   within,
+  act,
 } from '@testing-library/react';
 import InteractiveWidget from './InteractiveWidget';
 import { syncTasksWithCount } from '../action';
@@ -59,5 +60,23 @@ describe('InteractiveWidget', () => {
     fireEvent.click(toggleButton);
     expect(toggleButton).toHaveTextContent('☀️ Light');
     expect(container).toHaveClass('bg-gray-900 text-white');
+  });
+
+  it('calls syncTasksWithCount when sync button is clicked', async () => {
+    (syncTasksWithCount as jest.Mock).mockResolvedValue({
+      success: true,
+      message: 'Tasks synchronized with 3',
+    });
+    render(<InteractiveWidget initialCount={3} />);
+    const syncButton = screen.getByRole('button', {
+      name: '💾 Sync to Server Tasks',
+    });
+    fireEvent.click(syncButton);
+    expect(syncTasksWithCount).toHaveBeenCalledWith(3);
+    await waitFor(() =>
+      expect(
+        screen.getByText('✅ Tasks synchronized with 3')
+      ).toBeInTheDocument()
+    );
   });
 });
