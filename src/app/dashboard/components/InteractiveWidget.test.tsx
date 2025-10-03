@@ -23,4 +23,13 @@ describe('InteractiveWidget', () => {
       'Task count: 10'
     );
   });
+
+  it('increments the counter when + button is clicked', () => {
+    render(<InteractiveWidget initialCount={5} />);
+    const incrementButton = screen.getByRole('button', {
+      name: '➕ Increment',
+    });
+    fireEvent.click(incrementButton);
+    expect(screen.getByText(/Task count:/i)).toHaveTextContent('Task count: 6');
+  });
 });
