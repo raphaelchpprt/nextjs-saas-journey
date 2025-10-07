@@ -1,9 +1,10 @@
 import { Task } from './types';
 
-/**
+/*
  * In-memory database for tasks
  * In production, this would be replaced with a real database (Postgres, MongoDB, etc.)
  */
+
 let tasks: Task[] = [
   {
     id: '1',
@@ -25,47 +26,39 @@ let tasks: Task[] = [
   },
 ];
 
-/**
- * Get all tasks
- * TODO: Add delay to simulate network latency (for testing loading states)
- */
 export async function getTasks(): Promise<Task[]> {
-  // TODO: Add await new Promise(resolve => setTimeout(resolve, 500));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   return [...tasks];
 }
 
-/**
- * Add a new task
- * TODO:
- * - Generate unique ID (use crypto.randomUUID())
- * - Create task with title, completed: false, createdAt: new Date()
- * - Add to tasks array
- * - Return the new task
- */
-export async function addTask(title: string): Promise<Task> {
-  // TODO: Implement this function
-  throw new Error('Not implemented');
+export async function addTask(
+  title: string,
+  completed: boolean,
+  createdAt: Date
+): Promise<Task> {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  const newTask: Task = {
+    id: crypto.randomUUID(),
+    title,
+    completed,
+    createdAt,
+  };
+  tasks.push(newTask);
+  return newTask;
 }
 
-/**
- * Toggle task completion status
- * TODO:
- * - Find task by id
- * - Toggle completed status
- * - Return updated task (or throw if not found)
- */
 export async function toggleTask(id: string): Promise<Task> {
-  // TODO: Implement this function
-  throw new Error('Not implemented');
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  const task = tasks.find((task) => task.id === id);
+  if (!task) throw new Error('Task not found');
+  task.completed = !task.completed;
+  return task;
 }
 
-/**
- * Delete a task
- * TODO:
- * - Remove task from array
- * - Return true if deleted, false if not found
- */
 export async function deleteTask(id: string): Promise<boolean> {
-  // TODO: Implement this function
-  throw new Error('Not implemented');
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  const task = tasks.find((task) => task.id === id);
+  if (!task) throw new Error('Task not found');
+  tasks = tasks.filter((task) => task.id !== id);
+  return true;
 }
