@@ -31,17 +31,13 @@ export async function getTasks(): Promise<Task[]> {
   return [...tasks];
 }
 
-export async function addTask(
-  title: string,
-  completed: boolean,
-  createdAt: Date
-): Promise<Task> {
+export async function addTask(title: string): Promise<Task> {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   const newTask: Task = {
     id: crypto.randomUUID(),
     title,
-    completed,
-    createdAt,
+    completed: false,
+    createdAt: new Date(),
   };
   tasks.push(newTask);
   return newTask;
