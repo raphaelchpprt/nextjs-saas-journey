@@ -7,7 +7,11 @@ const currentStats = {
   tasks: Math.floor(Math.random() * 100) + 10,
 };
 
-export async function getStats() {
+export async function getStats(): Promise<{
+  users: number;
+  revenue: string;
+  tasks: number;
+}> {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   return { ...currentStats };
 }
