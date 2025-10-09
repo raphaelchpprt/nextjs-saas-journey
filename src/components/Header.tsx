@@ -17,6 +17,7 @@ export const Header: FC = () => {
   const navItems: NavItem[] = [
     { href: '/', label: 'Home', isHome: true },
     { href: '/dashboard', label: 'Dashboard' },
+    { href: '/tasks', label: 'Tasks' },
     { href: '/about', label: 'About' },
     { href: '/pricing', label: 'Pricing' },
   ];
