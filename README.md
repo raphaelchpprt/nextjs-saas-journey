@@ -26,60 +26,6 @@
 
 > A comprehensive Next.js 15 learning project built with GitHub Copilot, demonstrating modern patterns, testing strategies, and **AI-assisted context engineering**.
 
-## 🤖 Context Engineering Focus
-
-This project showcases **advanced context engineering techniques** for AI-assisted development, demonstrating how to build production-quality software with GitHub Copilot.
-
-### 📝 Documentation as Context
-
-**Architecture Decision Records (ADRs)**
-- 6 detailed documents capturing every technical decision
-- Created **before** implementation to establish clear context
-- Serve as persistent memory for AI assistance across sessions
-- Examples: [Component syntax](./docs/adr/0001-component-and-page-syntax-convention.md), [Testing strategy](./docs/adr/0005-testing-strategy.md), [State management](./docs/adr/0002-state-management-strategy.md)
-
-**Structured Documentation**
-- [`DECISIONS.md`](./docs/DECISIONS.md) - Quick overview of all decisions
-- [`CHANGELOG.md`](./CHANGELOG.md) - Version history with context
-- [`CONTRIBUTING.md`](./CONTRIBUTING.md) - Development patterns and guidelines
-- Inline comments as context anchors for AI
-
-### 🔄 Context Preservation Strategy
-
-**Conversation Summaries**
-- Maintained throughout all development sessions
-- Preserved context between coding sessions (session continuity)
-- Enabled consistent AI assistance across features
-- Tracked progress, decisions, and technical inventory
-
-**Iterative Development Loop**
-1. **Context Setup**: ADR written with clear requirements and constraints
-2. **AI Collaboration**: Copilot generates code with full context awareness
-3. **Test-First**: Tests written alongside implementation (97% coverage)
-4. **Documentation Update**: Context enriched after each feature
-5. **Summary Preservation**: Session state saved for future work
-
-### 🎯 Results of Context Engineering
-
-- **97.29% Test Coverage**: Context clarity enabled comprehensive testing
-- **Zero Breaking Changes**: Full context prevented regressions
-- **Consistent Architecture**: ADRs maintained architectural integrity
-- **Rapid Development**: Clear context accelerated AI-assisted coding
-- **Maintainable Codebase**: Future contributors have full historical context
-
-### 💡 Key Techniques Used
-
-| Technique | Implementation | Benefit |
-|-----------|---------------|---------|
-| **ADRs** | 6 documented decisions | Persistent architectural memory |
-| **Inline Context** | Comments + TypeScript types | Local context for AI |
-| **Test Coverage** | 97%+ with descriptive names | Behavioral documentation |
-| **Conventional Commits** | Semantic commit messages | Historical context |
-| **Structured Docs** | DECISIONS.md, CHANGELOG.md | Quick context retrieval |
-| **Summaries** | Session state tracking | Cross-session continuity |
-
-> **Learn More**: See how context engineering was applied in practice by exploring the [ADRs](./docs/adr/) and [commit history](https://github.com/raphaelchpprt/nextjs-saas-journey/commits/main).
-
 ## 🎯 Main Projects
 
 ### 📝 Task Manager
@@ -124,6 +70,27 @@ Reusable component library.
 - ✅ **Comprehensive Testing** (97%+ coverage)
 - ✅ **Design System** with CVA
 - ✅ **Architecture Decision Records** (ADRs)
+
+## 🤖 Context Engineering Focus
+
+This project demonstrates **advanced AI collaboration techniques** using GitHub Copilot with structured context management.
+
+### How Context Was Engineered
+
+**Documentation as Persistent Memory**
+- **[6 ADRs](./docs/adr/)**: Technical decisions documented before implementation
+- **Conversation Summaries**: Context preserved across development sessions
+- **Structured Docs**: `DECISIONS.md`, `CHANGELOG.md`, `CONTRIBUTING.md`
+
+**Development Process**
+1. Write ADR with requirements → 2. Build with Copilot → 3. Test (97% coverage) → 4. Update context
+
+**Key Results**
+- 97% test coverage through context clarity
+- Zero breaking changes via full context awareness
+- Consistent architecture maintained by ADRs
+
+> **Learn More**: Explore [ADRs](./docs/adr/) and [commit history](https://github.com/raphaelchpprt/nextjs-saas-journey/commits/main) to see context engineering in practice.
 
 ## 🚀 Quick Start
 
