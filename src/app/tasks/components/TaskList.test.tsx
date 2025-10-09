@@ -35,7 +35,7 @@ describe('TaskList', () => {
 
   it('renders all tasks by default', () => {
     render(<TaskList initialTasks={mockTasks} />);
-    
+
     expect(screen.getByText('Task 1')).toBeInTheDocument();
     expect(screen.getByText('Task 2')).toBeInTheDocument();
     expect(screen.getByText('Task 3')).toBeInTheDocument();
@@ -43,7 +43,7 @@ describe('TaskList', () => {
 
   it('shows filter buttons with correct counts', () => {
     render(<TaskList initialTasks={mockTasks} />);
-    
+
     expect(screen.getByText(/All \(3\)/i)).toBeInTheDocument();
     expect(screen.getByText(/Active \(2\)/i)).toBeInTheDocument();
     expect(screen.getByText(/Completed \(1\)/i)).toBeInTheDocument();
@@ -51,7 +51,7 @@ describe('TaskList', () => {
 
   it('filters active tasks when Active button is clicked', () => {
     render(<TaskList initialTasks={mockTasks} />);
-    
+
     const activeButton = screen.getByRole('button', { name: /Active \(2\)/i });
     fireEvent.click(activeButton);
 
@@ -62,8 +62,10 @@ describe('TaskList', () => {
 
   it('filters completed tasks when Completed button is clicked', () => {
     render(<TaskList initialTasks={mockTasks} />);
-    
-    const completedButton = screen.getByRole('button', { name: /Completed \(1\)/i });
+
+    const completedButton = screen.getByRole('button', {
+      name: /Completed \(1\)/i,
+    });
     fireEvent.click(completedButton);
 
     expect(screen.queryByText('Task 1')).not.toBeInTheDocument();
@@ -77,7 +79,7 @@ describe('TaskList', () => {
     });
 
     render(<TaskList initialTasks={mockTasks} />);
-    
+
     const checkboxes = screen.getAllByRole('button', { name: /Mark as/i });
     fireEvent.click(checkboxes[0]!);
 
@@ -90,7 +92,7 @@ describe('TaskList', () => {
     });
 
     render(<TaskList initialTasks={mockTasks} />);
-    
+
     const deleteButtons = screen.getAllByLabelText(/Delete task/i);
     fireEvent.click(deleteButtons[0]!);
 
@@ -99,7 +101,7 @@ describe('TaskList', () => {
 
   it('shows empty state when no tasks match filter', () => {
     render(<TaskList initialTasks={[]} />);
-    
+
     expect(screen.getByText(/No tasks yet/i)).toBeInTheDocument();
   });
 
@@ -108,9 +110,9 @@ describe('TaskList', () => {
       { id: '1', title: 'Task 1', completed: true, createdAt: new Date() },
       { id: '2', title: 'Task 2', completed: true, createdAt: new Date() },
     ];
-    
+
     render(<TaskList initialTasks={completedTasks} />);
-    
+
     const activeButton = screen.getByRole('button', { name: /Active/i });
     fireEvent.click(activeButton);
 
@@ -119,17 +121,17 @@ describe('TaskList', () => {
 
   it('applies correct styling to completed tasks', () => {
     render(<TaskList initialTasks={mockTasks} />);
-    
+
     const task2 = screen.getByText('Task 2');
     expect(task2).toHaveClass('line-through');
   });
 
   it('shows checkmark for completed tasks', () => {
     render(<TaskList initialTasks={mockTasks} />);
-    
+
     const checkboxes = screen.getAllByRole('button', { name: /Mark as/i });
     const completedCheckbox = checkboxes[1]!; // Task 2 is completed
-    
+
     expect(completedCheckbox.textContent).toContain('✓');
   });
 });
