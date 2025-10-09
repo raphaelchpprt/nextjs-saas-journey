@@ -161,5 +161,5 @@ MIT License
 
 ---
 
-**Built by [@raphaelchpprt](https://github.com/raphaelchpprt) with GitHub Copilot** • [raphaelch.me](https://raphaelch.me)
+**Built by [@raphaelchpprt](https://github.com/raphaelchpprt) ** • 🔗 [raphaelch.me](https://raphaelch.me)
 
