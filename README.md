@@ -155,11 +155,7 @@ npm test -- --coverage   # Coverage report
 - **🏗️ ADRs**: [`docs/adr/`](./docs/adr/) (6 architectural decisions)
 - **🤝 Contributing**: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
 
-## 📄 License
-
-MIT License
-
 ---
 
-**Built by [@raphaelchpprt](https://github.com/raphaelchpprt) ** • 🔗 [raphaelch.me](https://raphaelch.me)
+**Built by [@raphaelchpprt](https://github.com/raphaelchpprt)** • 🔗 [raphaelch.me](https://raphaelch.me)
 
