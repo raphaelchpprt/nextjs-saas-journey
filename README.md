@@ -2,15 +2,10 @@
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.5.4-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-19.1.0-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-
 [![Tests](https://img.shields.io/badge/tests-45%20passing-success?style=flat-square&logo=jest)](https://github.com/raphaelchpprt/nextjs-saas-journey)
 [![Coverage](https://img.shields.io/badge/coverage-97.29%25-brightgreen?style=flat-square)](https://github.com/raphaelchpprt/nextjs-saas-journey)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](./LICENSE)
-[![Version](https://img.shields.io/badge/version-0.1.0-orange?style=flat-square)](https://github.com/raphaelchpprt/nextjs-saas-journey/releases/tag/v0.1.0)
 
-> Un projet d'apprentissage complet démontrant les patterns modernes de Next.js 15, TypeScript, Tailwind CSS et les meilleures pratiques de testing.
+> A comprehensive Next.js 15 learning project built with GitHub Copilot, demonstrating modern patterns, testing strategies, and **AI-assisted context engineering**.
 
 ## 🎯 Projets Principaux
 
@@ -57,28 +52,17 @@ Bibliothèque de composants réutilisables.
 - ✅ **Design System** avec CVA
 - ✅ **Architecture Decision Records** (ADRs)
 
-## 🚀 Installation
+## 🚀 Quick Start
 
 ```bash
 git clone https://github.com/raphaelchpprt/nextjs-saas-journey.git
 cd nextjs-saas-journey
 npm install
-npm run dev
+npm run dev              # Start development server
+npm test                 # Run tests (97% coverage)
 ```
 
-Ouvrez [http://localhost:3000](http://localhost:3000)
-
-## 📝 Scripts Disponibles
-
-```bash
-npm run dev              # Serveur de développement
-npm run build            # Build production
-npm test                 # Tests (watch mode)
-npm run test:coverage    # Tests avec coverage
-npm run test:tasks       # Tests du Task Manager
-npm run test:dashboard   # Tests du Dashboard
-npm run type-check       # Vérification TypeScript
-```
+Open [http://localhost:3000](http://localhost:3000)
 
 ## 📁 Project Structure
 
@@ -135,10 +119,6 @@ npm test -- --coverage   # Rapport de couverture
 
 MIT License
 
-## 📧 Contact
-
-**Raphaël Chopart** • [@raphaelchpprt](https://github.com/raphaelchpprt)
-
 ---
 
-Construit avec ❤️ comme parcours d'apprentissage Next.js moderne
+**Built by [@raphaelchpprt](https://github.com/raphaelchpprt) with GitHub Copilot** • [raphaelch.me](https://raphaelch.me)
