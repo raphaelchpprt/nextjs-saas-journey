@@ -139,4 +139,31 @@ This file provides a chronological overview of all architectural decisions. For 
 
 ---
 
-*Last updated: 2025-10-03*
+## 2025-10-09: Task Manager Mini-Project
+**Status:** Accepted | **File:** [0006-task-manager-mini-project.md](./adr/0006-task-manager-mini-project.md)
+
+**Decision:** Build complete Task Manager application as culmination of Next.js learning journey
+
+**Coverage achieved:** 98%+ (45 tests total)
+
+**Key technologies:**
+- Zod for type-safe validation (createTaskSchema)
+- useOptimistic for instant UI updates
+- Server Actions for mutations (add/toggle/delete)
+- In-memory database with UUID generation
+- Filter system (All/Active/Completed)
+- Complete test coverage with React Testing Library
+
+**Features implemented:**
+- Add, toggle, and delete tasks
+- Real-time filtering with live counts
+- Loading states and error boundaries
+- Optimistic UI updates
+- Form validation with Zod
+- Reusable Card component system
+
+**Reasoning:** Demonstrates complete full-stack architecture combining all learned patterns (Server Components, Client Components, Server Actions, testing, TypeScript, Tailwind, CVA). Production-ready architecture that's easy to extend with real database.
+
+---
+
+*Last updated: 2025-10-09*
