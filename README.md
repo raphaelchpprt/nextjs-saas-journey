@@ -24,7 +24,7 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-✓-FE5196?style=flat-square&logo=conventionalcommits&logoColor=white)](https://www.conventionalcommits.org/)
 
 
-> A comprehensive Next.js 15 learning project built with GitHub Copilot, demonstrating modern patterns, testing strategies, and **AI-assisted context engineering**.
+> A comprehensive Next.js 15 learning project built with GitHub Copilot, demonstrating modern patterns, testing strategies, and AI-assisted context engineering.
 
 ## 🎯 Main Projects
 
